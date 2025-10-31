@@ -7,11 +7,65 @@ Style Guide:
     -Black hex: 080708
     -Persian Green hex: 1B998B
 
-    Font - 
-
+    Font
+    -
+    -base size: 17 (multiply by 1.61803398875 for more appeal)
 
 */
 
+
+body{
+    background-color: #F2FDFF;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.background{
+    z-index: -2;
+    width: 0;
+	height: 0;
+	border-left: 0px solid transparent;
+	border-right: 650px solid transparent;
+	border-bottom: 500px solid #564787;
+
+
+}
+
+#tri2{
+    position: absolute;
+    rotate: 180deg;
+    left: 70%;
+    bottom: 50%;
+}
+
+#tri1{
+    position: absolute;
+    right: 70%;
+    top: 50%;
+}
+
+
+.container{
+    position: relative;
+    top: 19vw;
+}
+
 .CenterText {
     text-align: center;
+    line-height: 60%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #080708;
+
 }
+
+.subText {
+    font-size: 20px;
+    position: relative;
+    font-weight: lighter;
+}
+
+#headerOne {
+    font-size: 72.0131556174px;
+    text-shadow: -4px 5px #1B998B;
+}
+
