@@ -9,6 +9,21 @@
     <title>Conversion Calculator</title>
 </head>
 <body>
-    
+    <h1>Conversion Calculator</h1>
+    <select name="conversions" id="conversions">
+        <option value="celcius_fahrenheit">Celcius - Fahrenheit</option>
+        <option value="fahrenheit_celcius">Fahrenheit - Celcius</option>
+        <option value="meters_feet">Meters - Feet</option>
+        <option value="feet_meters">Feet - Meters</option>
+    </select>
+    <br><br>
+    <label for="conversionInput" id="unitOne">Celcius</label>
+    <label for="conversionOutput" id="unitTwo">Fahrenheit</label>
+    <br>
+    <input type="number" name="conversionInput" id="conversionInput" onkeyup="convert()"><label> - </label>
+    <input type="number" name="conversionOutput" id="conversionOutput" readonly>
+
+
+
 </body>
 </html>
