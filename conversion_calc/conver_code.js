@@ -69,3 +69,7 @@ function feet_meters(input){
     let meters = input * 0.3048;
     document.getElementById("conversionOutput").value = meters;
 }
+
+document.getElementById("returnButton").addEventListener("click", function() {
+    location.href = "../index.html";
+});

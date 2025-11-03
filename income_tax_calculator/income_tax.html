@@ -9,12 +9,60 @@
     <title>Income Tax Calculator</title>
 </head>
 <body>
-    <h1>Income Tax Calculator</h1>
-    
-    <label for="income">Please Input Income Here:</label>
-    <input type="number" name="income" id="income">
-    <br>
-    <label for="income_tax">Your Income Tax is:</label>
-    <input type="number" name="income_tax" id="income_tax" readonly>
+
+    <div class="header">
+        <input type="image" src="/images_and_stuff/logo.png" id="returnButton">
+        <h5 id="headerText">Income Tax Calculator</h5>
+    </div>
+
+    <div class="gridContainer">
+        <div class="inputsContainer">
+            <label class="labels text" for="income">Please Input Income Here:</label>
+            <input class="inputs text" type="number" name="income" id="income">
+
+            <label class="labels text" for="income_tax">Your Income Tax is:</label>
+            <input class="inputs text" type="number" name="income_tax" id="income_tax" readonly>
+        </div>
+        <div class="textContainer">
+            <table class="text" id="taxTable">
+                <tr>
+                    <th><em>Amount of Taxable Income</em></th>
+                    <th>Basic tax</th>
+                    <th>Rate</th>
+                </tr>
+                <tr>
+                    <td>php0 - php250,000</td>
+                    <td>0%</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>php250,000 - php400,000</td>
+                    <td>20% excess over minimum</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>php400,000 - php800,000</td>
+                    <td>25% excess over minimum</td>
+                    <td>php30,000</td>
+                </tr>
+                <tr>
+                    <td>php800,000 - php2,000,000</td>
+                    <td>30% excess over minimum</td>
+                    <td>php130,000</td>
+                </tr>
+                <tr>
+                    <td>php2,000,000 - php8,000,000</td>
+                    <td>32% excess over minimum</td>
+                    <td>php390,000</td>
+                </tr>
+                <tr>
+                    <td>php8,000,000 beyond</td>
+                    <td>35% excess over minimum</td>
+                    <td>php2,410,000</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+   
 </body>
 </html>

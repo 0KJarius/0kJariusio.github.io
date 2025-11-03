@@ -46,6 +46,4 @@ function calculateIncomeTax(percentage, bonus, min, income){
 
 document.getElementById("returnButton").addEventListener("click", function() {
     location.href = "../index.html";
-    console.log("click");
-    alert("yea");
 });
