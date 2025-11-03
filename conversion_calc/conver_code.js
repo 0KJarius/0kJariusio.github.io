@@ -1,3 +1,29 @@
+document.getElementById("conversions").addEventListener("mouseup", function() {
+    let selectedConversion = document.getElementById("conversions").value;
+
+    switch (selectedConversion) {
+        case "celcius_fahrenheit":
+            document.getElementById("unitOne").innerHTML = "Celcius";
+            document.getElementById("unitTwo").innerHTML = "Fahrenheit";
+            break;
+        case "fahrenheit_celcius":
+            document.getElementById("unitOne").innerHTML = "Fahrenheit";
+            document.getElementById("unitTwo").innerHTML = "Celcius";
+            break;
+        case "meters_feet":
+            document.getElementById("unitOne").innerHTML = "Meters";
+            document.getElementById("unitTwo").innerHTML = "Feet";
+            break
+        case "feet_meters":
+            document.getElementById("unitOne").innerHTML = "Feet";
+            document.getElementById("unitTwo").innerHTML = "Meters";
+            break;
+    }
+});
+
+
+
+
 function convert()
 {
     let conversionType = document.getElementById("conversions").value;
@@ -6,9 +32,13 @@ function convert()
     switch (conversionType) {
         case "celcius_fahrenheit":
             celcius_fahrenheit(numberInput);
+            document.getElementById("unitOne").innerHTML = "Celcius";
+            document.getElementById("unitTwo").innerHTML = "Fahrenheit";
             break;
         case "fahrenheit_celcius":
             fahrenheit_celcius(numberInput);
+            document.getElementById("unitOne").innerHTML = "Celcius";
+            document.getElementById("unitTwo").innerHTML = "Fahrenheit";
             break;
         case "meters_feet":
             meters_feet(numberInput);

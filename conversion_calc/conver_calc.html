@@ -2,28 +2,38 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="conver_styling.css">
-    <script src="conver_code.js"></script>
+    <script defer src="conver_code.js"></script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversion Calculator</title>
 </head>
 <body>
-    <h1>Conversion Calculator</h1>
-    <select name="conversions" id="conversions">
-        <option value="celcius_fahrenheit">Celcius - Fahrenheit</option>
-        <option value="fahrenheit_celcius">Fahrenheit - Celcius</option>
-        <option value="meters_feet">Meters - Feet</option>
-        <option value="feet_meters">Feet - Meters</option>
-    </select>
-    <br><br>
-    <label for="conversionInput" id="unitOne">Celcius</label>
-    <label for="conversionOutput" id="unitTwo">Fahrenheit</label>
-    <br>
-    <input type="number" name="conversionInput" id="conversionInput" onkeyup="convert()"><label> - </label>
-    <input type="number" name="conversionOutput" id="conversionOutput" readonly>
 
+    <div class="header">
+        <input type="image" src="/images_and_stuff/logo.png" id="returnButton">
+        <h5 id="headerText">Conversion Calculator</h5>
+    </div>
 
+    <div class="container">  
 
+        <select name="conversions" id="conversions">
+            <option class="options" value="celcius_fahrenheit">Celcius - Fahrenheit</option>
+            <option class="options" value="fahrenheit_celcius">Fahrenheit - Celcius</option>
+            <option class="options" value="meters_feet">Meters - Feet</option>
+            <option class="options" value="feet_meters">Feet - Meters</option>
+        </select>
+        
+        <div class="containerCollumn">
+             <label  class="label" for="conversionInput" id="unitOne">N/A</label>
+             <input type="number" class="numberBoxes" name="conversionInput" id="conversionInput" onkeyup="convert()"> 
+        </div>
+        <label class="label" id="arrowthing">➡️</label>
+        <div class="containerCollumn">
+            <label class="label" for="conversionOutput" id="unitTwo">N/A</label>
+            <input type="number" class="numberBoxes" name="conversionOutput" id="conversionOutput" readonly>
+        </div>
+        
+    </div>
 </body>
 </html>
