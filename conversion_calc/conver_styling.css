@@ -35,7 +35,6 @@ body{
     gap: 0.25em;
 
     flex-wrap: wrap;
-    border: black solid 2px; 
     
 }
 
@@ -55,6 +54,7 @@ body{
 }
 
 .header{
+    z-index: 1;
     display: flex;
     position: fixed;
     width: 100%;
@@ -107,6 +107,20 @@ body{
     font-weight: 350;
 }
 
-@media (max-width: 454px){
+@media (max-width: 1285px){
+    .container{
+        flex-direction: column;
+    }
+
+    .containerCollumn{
+        margin: 3%;
+    }
+}
+
+@media (max-height: 755px){
+    .container{
+        position: relative;
+        top: 10em;
+    }
 
 }
