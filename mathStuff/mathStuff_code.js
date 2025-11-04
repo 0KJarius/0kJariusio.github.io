@@ -55,3 +55,7 @@ function calculateAverage(input){
     average = sum/input;
     document.getElementById("output").value = average;
 }
+
+document.getElementById("returnButton").addEventListener("click", function() {
+    location.href = "../index.html";
+});

@@ -57,7 +57,14 @@ body{
 }
 #returnButton{
     height: 100%;
+
+    transition: filter 0.4s;
 }
+
+#returnButton:hover{
+    filter: invert(100%);
+}
+
 
 .gridContainer{
     display: grid;
@@ -105,6 +112,13 @@ body{
 
     border: var(--black) solid 4px;
     box-shadow: var(--rasberry) -3px 3px;
+
+    transition: box-shadow 0.2s;
+}
+
+.inputs:focus{
+    box-shadow: var(--ultra-violet) -3px 3px;
+    border: var(--rasberry) solid 4px;
 }
 
 .textContainer{
@@ -133,6 +147,14 @@ th, td{
     border: var(--ultra-violet) outset 4px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-radius: 0.3em;
+
+    transition: all 0.1s;
+}
+
+th:hover, td:hover{
+    background-color: var(--black);
+    border: var(--rasberry) solid 4px;
+    color: var(--rasberry);
 }
 
 @media (max-width: 1142px){

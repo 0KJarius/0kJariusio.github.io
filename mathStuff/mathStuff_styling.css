@@ -1,0 +1,156 @@
+/*
+Style Guide:
+    colors
+    -Ultra Violet hex: 564787
+    -Rasberry hex: D81E5B
+    -Azure(web) hex: F2FDFF
+    -Black hex: 080708
+    -Persian Green hex: 1B998B
+    -1d1d1d
+
+    Font
+    -'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    -base size: 17 (multiply by 1.61803398875 for more appeal)
+
+*/
+:root{
+    --ultra-violet: #564787;
+    --rasberry: #D81E5B;
+    --azure: #F2FDFF;
+    --black: #080708;
+    --persian-green: #1B998B;
+    --mainFont: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --background: var(--black);
+}
+
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+
+}
+
+body{
+    background-color: var(--black);
+    background-image: url("/images_and_stuff/background.png") ;
+}
+
+.header{
+    z-index: 1;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 2em;
+    background-color: var(--ultra-violet);
+    font-size: 2em;
+
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--azure);
+
+}
+
+#returnButton{
+    height: 100%;
+
+    transition: filter 0.4s;
+}
+
+#returnButton:hover{
+    filter: invert(100%);
+}
+
+.text{
+    font-size: 2rem;
+    font-family: var(--mainFont);
+    color: var(--azure);
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25em;
+
+    flex-wrap: wrap;
+    
+}
+
+.subContainer{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5vh;
+    margin-left: 2em;
+}
+
+.numbers{
+    color: var(--black);
+    border: #1d1d1d solid  4px;
+    border-radius: 0.3em;
+    box-shadow: -5px 8px var(--persian-green);
+    font-weight: 350;
+
+    transition: box-shadow 0.1s;
+}
+
+.numbers:focus{
+    box-shadow: -5px 8px var(--ultra-violet);
+    border: var(--rasberry) solid 4px;
+}
+
+label {
+    text-align: center;
+    font-weight: 350;
+}
+
+#operation{
+    padding: 0.1em;
+    font-size: 2rem;
+    color: var(--azure);
+
+    background-color: var(--rasberry);
+    border: #9e2375 solid 4px;
+    border-radius: 0.3em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    box-shadow: -5px 8px var(--ultra-violet);
+
+    transition: all 0.4s;
+}
+
+#operation:hover{
+    background-color: var(--black);
+    color: var(--rasberry);
+    border: var(--rasberry) solid 4px;
+    box-shadow: -5px 8px var(--persian-green);
+}
+
+.option{
+    font-weight: bolder; 
+}
+
+@media (max-width: 1285px){
+    .container{
+        flex-direction: column;
+    }
+
+    .containerCollumn{
+        margin: 3%;
+    }
+}
+
+@media (max-height: 755px){
+    .container{
+        position: relative;
+        top: 10em;
+    }
+
+}

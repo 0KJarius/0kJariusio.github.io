@@ -9,17 +9,30 @@
     <title>Nth Factorial, Sum, and Average</title>
 </head>
 <body>
-    <h1>N<sup>th</sup> Factorial, Sum, and Average</h1>
-    <select name="operation" id="operation">
-        <option value="factorial">Factorial</option>
-        <option value="sum">Sum</option>
-        <option value="average">Sum and Average</option>
-    </select>
 
-    <label for="input">Number input:</label>
-    <input type="number" name="input" id="input">
+    <div class="header">
+        <input type="image" src="/images_and_stuff/logo.png" id="returnButton">
+        <h5 id="headerText">Nth Factorial, Sum, and Average</h5>
+    </div>
     
-    <label for="input">Result:</label>
-    <input type="number" name="output" id="output" readonly>
+    <div class="container">
+        <select class="text" name="operation" id="operation">
+            <option class="text option" value="factorial">Factorial</option>
+            <option class="text option" value="sum">Sum</option>
+            <option class="text option" value="average">Sum and Average</option>
+        </select>
+
+        <div class="subContainer">
+             <label class="text" for="input">Number input:</label>
+            <input class="text numbers" type="number" name="input" id="input">
+        </div>
+       
+        <div class="subContainer">
+            <label class="text" for="input">Result:</label>
+            <input class="text numbers" type="number" name="output" id="output" readonly>
+        </div>
+       
+    </div>
+    
 </body>
 </html>
