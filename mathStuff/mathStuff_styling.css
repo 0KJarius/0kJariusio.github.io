@@ -38,7 +38,7 @@ Style Guide:
 
 body{
     background-color: var(--black);
-    background-image: url("/images_and_stuff/background.png") ;
+    background-image: url("../images_and_stuff/background.png") ;
 }
 
 .header{
