@@ -81,7 +81,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    flex-wrap: wrap;
     border: black inset 3px;
     border-radius: 1em;
     background-color: var(--black) / 100%;
@@ -115,13 +115,13 @@ body{
     position: relative;
     top: 10em;
     justify-content: space-evenly;
-
+    flex-wrap: wrap;
 }
 
 .subContainer{
     cursor: pointer;
-    width: 20%;
-    height: 80%;
+    width: 400px;
+    height: 400px;
     margin-top: 1.5em;
     background-color: rgb(209, 209, 209);
     border-radius: 1em;
@@ -180,3 +180,82 @@ body{
     transition: 0.4s;
 }
 
+@media (max-width: 1504px){
+        #image{
+            width: 10em;
+            height: 10em;
+        }
+        #introText{
+            font-size: 3rem;
+        }
+        #introParagraph {
+            max-width: 50ch;
+            font-size: 1.2rem;
+            font-weight: 200;
+            margin-bottom: 1em;
+        }
+
+}
+
+@media (max-width: 1100px){
+        #image{
+            width: 10em;
+            height: 10em;
+        }
+        #introText{
+            text-align: center;
+            font-size: 2.5rem;
+        }
+        #introParagraph {
+            text-align: center;
+            max-width: 50ch;
+            font-size: 1.2rem;
+            font-weight: 200;
+            margin-bottom: 1em;
+        }
+
+    }
+
+@media (max-width: 800px){
+        #image{
+            width: 10em;
+            height: 10em;
+        }
+        #introText{
+            text-align: center;
+            font-size: 2.5rem;
+        }
+        #introParagraph {
+            text-align: center;
+            max-width: 50ch;
+            font-size: 1.2rem;
+            font-weight: 200;
+            margin-bottom: 1em;
+        }
+
+        .subContainer{
+            width: 300px;
+            height: 300px;
+        }
+
+        .subContainerText{
+            font-size: 1.5rem;
+        }
+
+        .subText{
+            font-size: 1.2rem;
+        }
+
+        .imageStuff{
+            width: 70%;
+        }
+
+}
+
+@media (max-width: 425px){
+    .containerTwo{
+        width: 90vw;
+        left: 5%;
+        right: 5%;
+    }
+}
