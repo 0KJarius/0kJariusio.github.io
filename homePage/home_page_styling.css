@@ -1,0 +1,129 @@
+/*
+Style Guide:
+    colors
+    -Ultra Violet hex: 564787
+    -Rasberry hex: D81E5B
+    -Azure(web) hex: F2FDFF
+    -Black hex: 080708
+    -Persian Green hex: 1B998B
+    -1d1d1d
+
+    Font
+    -'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    -base size: 17 (multiply by 1.61803398875 for more appeal)
+
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+}
+
+:root{
+    --ultra-violet: #564787;
+    --rasberry: #D81E5B;
+    --azure: #F2FDFF;
+    --black: #080708;
+    --persian-green: #1B998B;
+    --mainFont: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --background: var(--black);
+}
+
+body{
+    background-color: var(--black);
+    background-image: url("/images_and_stuff/background.png") ;
+}
+
+.text{
+    font-size: 2rem;
+    font-family: var(--mainFont);
+    color: var(--azure);
+}
+
+.header{
+    z-index: 1;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 2em;
+    background-color: var(--ultra-violet);
+    font-size: 2rem;
+
+    align-items: center;
+    font-family: var(--mainFont);
+    color: var(--azure);
+
+}
+
+#returnButton{
+    height: 100%;
+
+    transition: filter 0.4s;
+}
+
+#returnButton:hover{
+    filter: invert(100%);
+}
+
+.containerTwo{
+    width: 60vw;
+
+    position: relative;
+    top: 4em;
+    left: 20%;
+    right: 20%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: black inset 3px;
+    border-radius: 1em;
+    background-color: var(--black) / 100%;
+    backdrop-filter: blur(5px);
+}
+
+#image{
+    width: 20em;
+    height: 20em;
+}
+
+.subContainerTwo{
+    align-self: center;
+}
+
+#introText{
+    font-size: 6rem;
+    font-weight: 650;
+}
+
+#introParagraph {
+    max-width: 50ch;
+    font-size: 1.4rem;
+    font-weight: 200;
+}
+
+.container{
+    display: flex;
+    height: 50vh;
+    position: relative;
+    top: 3em;
+    justify-content: space-evenly;
+
+
+}
+
+.subContainer{
+    width: 20%;
+    height: 80%;
+    margin-top: 1.5em;
+    background-color: var(--azure);
+    border-radius: 1em;
+
+    border: var(--black) solid 3px;
+    box-shadow: var(--rasberry) -7px 8px;
+}
