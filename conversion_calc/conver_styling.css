@@ -140,7 +140,7 @@ body{
     border: var(--rasberry) solid 4px;
 }
 
-@media (max-width: 1285px){
+@media (max-width: 13645px){
     .container{
         flex-direction: column;
     }
