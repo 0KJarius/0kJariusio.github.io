@@ -76,6 +76,7 @@ body{
     top: 4em;
     left: 20%;
     right: 20%;
+    top: 7em;
 
     display: flex;
     justify-content: center;
@@ -85,6 +86,7 @@ body{
     border-radius: 1em;
     background-color: var(--black) / 100%;
     backdrop-filter: blur(5px);
+
 }
 
 #image{
@@ -111,19 +113,70 @@ body{
     display: flex;
     height: 50vh;
     position: relative;
-    top: 3em;
+    top: 10em;
     justify-content: space-evenly;
-
 
 }
 
 .subContainer{
+    cursor: pointer;
     width: 20%;
     height: 80%;
     margin-top: 1.5em;
-    background-color: var(--azure);
+    background-color: rgb(209, 209, 209);
     border-radius: 1em;
 
     border: var(--black) solid 3px;
     box-shadow: var(--rasberry) -7px 8px;
+
+    transition: all 0.3s;
 }
+
+.subContainer:hover{
+    background-color: var(--black);
+    border: var(--rasberry) solid 3px;
+    box-shadow: var(--persian-green) -7px 8px;
+    transform: translateY(-4px);
+    
+    color: var(--azure);
+}
+
+.subContainer:hover .subContainerText{    
+    color: var(--rasberry);
+}
+.subContainer:hover .subText{    
+    color: var(--persian-green);
+}
+.subContainer:hover .imageStuff{    
+    box-shadow: #564787 -3px 4px;
+    transform: translateY(-4px);
+}
+
+
+.subContainerText{
+    color: var(--black);
+    font-size: 1.8rem;
+    font-weight: 100;
+    padding-left: 0.8em;
+    padding-top: 0.5em;
+}
+
+
+.subText{
+    color: var(--black);
+    font-size: 1.4rem;
+    font-weight: 100;
+    padding-left: 0.8em;
+    padding-top: 0.5em;
+}
+
+.imageStuff{
+    width: 90%;
+    border-radius: 1em;
+    margin-left: 4%;
+    margin-top: 3%;
+
+    border: #080708 solid 2px;
+    transition: 0.4s;
+}
+
