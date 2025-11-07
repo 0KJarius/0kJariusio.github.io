@@ -1,0 +1,52 @@
+/*
+Style Guide:
+    colors
+    -Ultra Violet hex: 564787
+    -Rasberry hex: D81E5B
+    -Azure(web) hex: F2FDFF
+    -Black hex: 080708
+    -Persian Green hex: 1B998B
+    -1d1d1d
+
+    Font
+    -'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    -base size: 17 (multiply by 1.61803398875 for more appeal)
+
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+}
+
+:root{
+    --ultra-violet: #564787;
+    --rasberry: #D81E5B;
+    --azure: #F2FDFF;
+    --black: #080708;
+    --persian-green: #1B998B;
+    --mainFont: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --background: var(--black);
+}
+
+table {
+    counter-reset: rows -1;
+}
+
+tr{
+    counter-increment: rows;
+}
+
+tr td:first-child::before{
+    content: counter(rows);
+
+}
+
+th, td{
+    padding-left: 3ch;
+    padding-right: 3ch;
+}
