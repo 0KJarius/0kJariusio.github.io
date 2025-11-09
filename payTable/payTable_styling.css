@@ -33,6 +33,147 @@ Style Guide:
     --background: var(--black);
 }
 
+body{
+    background-color: var(--black);
+    background-image: url("../images_and_stuff/background.png") ;
+}
+
+.text{
+    font-size: 1.2rem;
+    font-family: var(--mainFont);
+    color: var(--azure);
+    font-weight: 300;
+}
+
+.input{
+    color: var(--black);
+    border-radius: 0.3em;
+    box-shadow: var(--persian-green) -3px 4px;
+    border: var(--black) solid 2px;
+    font-weight: 200;
+}
+
+.deleteInput{
+    box-shadow: var(--rasberry) -3px 4px;
+}
+
+#cautionSign{
+    min-height: 1em;
+    min-width: 1em;
+    max-height: 20em;
+    max-width: 20em;
+    width: auto;
+    height: auto;
+    align-self: center;
+
+
+    
+}
+
+.header{
+    z-index: 1;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 2em;
+    background-color: var(--ultra-violet);
+    font-size: 2rem;
+
+    align-items: center;
+    font-family: var(--mainFont);
+    color: var(--azure);
+
+}
+
+#returnButton{
+    height: 100%;
+
+    transition: filter 0.4s;
+}
+
+#returnButton:hover{
+    filter: invert(100%);
+}
+.container{
+    height: 100vw;
+
+    display: grid;
+    grid-template-rows: repeat(10, 20%);
+    grid-template-columns: repeat(4, 20%);
+    column-gap: 1em;
+    row-gap: 1em;
+    justify-content: center;
+}
+
+.buttonsAndStuff{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 1em;
+    padding: 1em;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.button{
+    border-radius: 0.5em;
+    background-color: var(--persian-green);
+    border: #165d7e outset 3px;
+    font-weight: 600;
+
+    transition: all 0.2s;
+}
+
+#deleteButton{
+    background-color: var(--rasberry);
+    border: #c01a75 outset 3px;
+    margin-top: 0.3em;
+}
+
+#addButton:hover{
+    background-color: var(--black);
+    border: var(--persian-green) solid 3px;
+    color: var(--persian-green);
+}
+
+
+#deleteButton:hover{
+    background-color: var(--black);
+    border: var(--rasberry) solid 3px;
+    color: var(--rasberry);
+}
+
+.employeeInfoContainer{
+    grid-area: 2 / 2;
+    border: #c01a75 outset 4px;
+    background-color: var(--rasberry);
+    box-shadow: var(--persian-green) -7px 7px;
+}
+
+.deleteEmployee{
+    grid-area: 2 / 3;
+    row-gap: 0.3em;
+    border: #16587e outset 4px;
+    background-color: var(--persian-green);
+    box-shadow: var(--rasberry) -7px 7px;
+}
+
+
+.payrollTable{
+    overflow-x: auto;
+    grid-area: 3 / 1 / 6 / 5;
+    border-radius: 1em;
+}
+
+#payrollTable{
+    border-collapse: collapse;
+    width: 100%;
+    
+}
+
+
 table {
     counter-reset: rows -1;
 }
@@ -45,8 +186,48 @@ tr td:first-child::before{
     content: counter(rows);
 
 }
-
 th, td{
+    border: #393166 outset 3px;
+    border-radius: 4px;
     padding-left: 3ch;
     padding-right: 3ch;
+    background-color: var(--ultra-violet);
+}
+
+th{
+    font-size: 1.2rem;
+}
+
+
+@media (max-width: 1280px) {
+    .text{
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 1024px){
+    .employeeInfoContainer{
+        grid-area: 2 / 2 / 2 / 4;
+    }
+
+    .deleteEmployee{
+        grid-area: 3 / 2 / 3 / 4;
+    }
+    .payrollTable{
+        grid-area: 4 / 1 / 7 / 5;
+    }
+}
+
+@media (max-width: 710px){
+    .employeeInfoContainer{
+        grid-area: 2 / 1 / 4 / 5;
+    }
+
+    .deleteEmployee{
+        grid-area: 4 / 1 / 6 / 5;
+    }
+    .payrollTable{
+        grid-area: 6 / 1 / 11 / 5;
+    }
 }

@@ -6,42 +6,54 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Payroll</title>
 </head>
 <body>
-
-    <div>
-        <input type="button" id="addButton" value="Add Employee">
-
-        <label for="employeeName">Employee Name:</label>
-        <input type="text" id="employeeName">
-
-        <label for="daysWorked">Days Worked:</label>
-        <input type="number" id="daysWorked">
-
-        <label for="dailyRate">Daily Rate:</label>
-        <input type="number" id="dailyRate">
-
-        <label for="deduct">Deduction Amount:</label>
-        <input type="number" id="deduct">
+    <div class="header">
+        <input type="image" src="../images_and_stuff/logo.png" id="returnButton">
+        <h5 id="headerText">Payroll</h5>
     </div>
 
-    <div>
-        <label for="employeeIndex"># of Employee</label>
-        <input type="number" id="employeeIndex" value="0">
-        <input type="button" id="deleteButton" value="Delete Employee">
+    <div class="container">
+        <div class="buttonsAndStuff employeeInfoContainer">
+            <input type="button" id="addButton" value="Add Employee" class="text button">
+
+            <label for="employeeName" class="text">Employee Name:</label>
+            <input type="text" id="employeeName" class="text input">
+
+            <label for="daysWorked" class="text">Days Worked:</label>
+            <input type="number" id="daysWorked" class="text input">
+
+            <label for="dailyRate" class="text">Daily Rate:</label>
+            <input type="number" id="dailyRate" class="text input">
+
+            <label for="deduct" class="text">Deduction Amount:</label>
+            <input type="number" id="deduct" class="text input">
+        </div>
+
+        <div class="buttonsAndStuff deleteEmployee">
+            <label for="employeeIndex" class="text"># of Employee</label>
+            <input type="number" id="employeeIndex" value="0" class="text input deleteInput">
+            <input type="button" id="deleteButton" value="Delete Employee" class="text button">
+            <img src="../images_and_stuff/danger.png" id="cautionSign">
+        </div>
+        
+        <div class="payrollTable">
+            <table id="payrollTable" class="text">
+                <tr>
+                    <th>#</th>
+                    <th>Employee Name</th>
+                    <th>Days Worked</th>
+                    <th>Daily Rate</th>
+                    <th>Gross Pay</th>
+                    <th>Deduction Amount</th>
+                    <th>Net Pay</th>
+                </tr>
+            </table>
+        </div>
+        
     </div>
     
-    <table id="payrollTable">
-        <tr>
-            <th>#</th>
-            <th>Employee Name</th>
-            <th>Days Worked</th>
-            <th>Daily Rate</th>
-            <th>Gross Pay</th>
-            <th>Deduction Amount</th>
-            <th>Net Pay</th>
-        </tr>
-    </table>
+   
 </body>
 </html>

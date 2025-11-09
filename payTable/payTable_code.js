@@ -36,8 +36,6 @@ document.getElementById("addButton").addEventListener("click", ()=>{
         } else{
             indexCell.innerHTML = value;
         }
-        
-        console.log(key + ": " + value);
         i++;
     }
 });
@@ -50,4 +48,8 @@ document.getElementById("deleteButton").addEventListener("click", ()=>{
     } 
     payrollTable.deleteRow(employeeIndex); 
 
+});
+
+document.getElementById("returnButton").addEventListener("click", function() {
+    location.href = "../index.html";
 });

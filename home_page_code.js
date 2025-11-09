@@ -9,3 +9,11 @@ document.getElementById("mathStuff").addEventListener("click", function(){
 document.getElementById("incomeTax").addEventListener("click", function(){
     location.href = "./income_tax_calculator/income_tax.html";
 });
+
+document.getElementById("payRoll").addEventListener("click", function(){
+    location.href = "./payTable/payTable.html";
+});
+
+document.getElementById("returnButton").addEventListener("click", function() {
+    location.href = "./index.html";
+});
