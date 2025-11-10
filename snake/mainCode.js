@@ -77,6 +77,7 @@ function moveSnake(){
         document.getElementById("score").textContent = currentScore.toString().padStart(3,"0");
 
         yummy = yummyGenerate();
+        speedUpGame();
         clearInterval(gameInerval);
         gameInerval = setInterval(() => {
             moveSnake();
@@ -120,13 +121,14 @@ function collisionChecker(){
 }
 
 function speedUpGame(){
+    console.log(gameSpeed)
     if(gameSpeed > 145){
         gameSpeed -= 5;
     } else if (gameSpeed > 120){
         gameSpeed -= 4;
     } else if (gameSpeed > 90){
         gameSpeed -= 3;
-    } else if (gameSpeed < 90){
+    } else if (gameSpeed <= 90 && gameSpeed >= 70){
         gameSpeed -= 3;
     }
 }

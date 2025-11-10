@@ -17,3 +17,7 @@ document.getElementById("payRoll").addEventListener("click", function(){
 document.getElementById("returnButton").addEventListener("click", function() {
     location.href = "./index.html";
 });
+
+document.getElementById("snake").addEventListener("click", function() {
+    location.href = "./snake/snake.html";
+});
